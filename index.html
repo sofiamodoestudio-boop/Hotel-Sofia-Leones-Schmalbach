@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hotel Sofia Leones Schmalbach — un refugio de inspiración francesa. Descubre nuestras habitaciones y conecta con nuestro concierge 24/7.">
+  <title>Hotel Sofia Leones Schmalbach | Un séjour à la française</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#172d28;--green:#24483e;--sage:#dce5dc;--cream:#f8f5ef;--gold:#bd9b64;--muted:#6d7973;--white:#fff;--line:rgba(30,60,50,.16);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans)}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+    .topline{background:var(--green);color:#f5efe3;text-align:center;padding:9px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 6.5%;background:var(--cream);position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line)}
+    .brand{display:flex;flex-direction:column;line-height:1.1}.brand b{font-family:var(--serif);font-weight:500;letter-spacing:.06em;font-size:20px}.brand small{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+    nav{display:flex;gap:30px;align-items:center;font-size:12px;letter-spacing:.07em}nav a:not(.nav-cta):hover{color:var(--gold)}
+    .nav-cta,.button{background:var(--green);color:white;padding:14px 21px;border:1px solid var(--green);font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;transition:.2s}
+    .nav-cta:hover,.button:hover{background:transparent;color:var(--green)}
+    .hero{min-height:640px;position:relative;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(12,30,25,.64),rgba(12,30,25,.14)),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90') center/cover}
+    .hero-inner{padding:85px 9%;max-width:850px}.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}.eyebrow:before{content:'';width:32px;height:1px;background:var(--gold)}
+    h1{font-family:var(--serif);font-weight:400;font-size:clamp(48px,7vw,84px);line-height:1.04;margin:25px 0 22px;letter-spacing:-.025em}.hero p{font-size:15px;line-height:1.8;max-width:470px;color:rgba(255,255,255,.86);margin-bottom:34px}.hero .button{background:var(--cream);color:var(--green);border-color:var(--cream)}.hero .button:hover{background:transparent;color:white;border-color:white}.hero-note{position:absolute;right:6.5%;bottom:36px;font-family:var(--serif);font-style:italic;letter-spacing:.05em;color:rgba(255,255,255,.82);font-size:14px}
+    .intro{padding:100px 8%;display:grid;grid-template-columns:1fr 1.15fr;gap:8%;align-items:center}.intro-copy h2,.section-head h2{font:400 clamp(34px,4.2vw,56px)/1.15 var(--serif);margin:20px 0}.intro-copy p{color:var(--muted);font-size:14px;line-height:1.9;max-width:480px}.intro-copy .button{margin-top:18px}.intro-img{min-height:420px;background:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative}.intro-img:after{content:'L’art de recevoir';position:absolute;bottom:-22px;left:-25px;background:var(--sage);padding:18px 25px;font:italic 18px var(--serif)}
+    .rooms{background:#e9eee8;padding:90px 8%}.section-head{text-align:center;max-width:700px;margin:0 auto 45px}.section-head .eyebrow{justify-content:center}.section-head p{color:var(--muted);line-height:1.8;font-size:14px}.room-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.room-card{background:var(--cream)}.room-photo{height:280px;background-size:cover;background-position:center}.photo-nk1{background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85')}.photo-nqq{background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85')}.photo-suite{background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85')}.room-content{padding:27px 28px 30px}.room-type{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:10px}.room-content h3{font:400 28px var(--serif);margin:9px 0}.room-content p{color:var(--muted);font-size:13px;line-height:1.75;min-height:68px}.room-link{font-size:11px;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid var(--gold);padding-bottom:5px}
+    .amenities{padding:100px 8%}.amenity-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:7%;align-items:center}.amenity-img{min-height:480px;background:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1100&q=85') center/cover}.amenity-list{display:grid;grid-template-columns:1fr 1fr;gap:26px 22px;margin-top:34px}.amenity{border-top:1px solid var(--line);padding-top:17px}.amenity strong{font:400 20px var(--serif);display:block;margin-bottom:8px}.amenity span{font-size:12px;line-height:1.7;color:var(--muted)}
+    .concierge{background:var(--green);color:#f7f4ec;padding:80px 8%;display:flex;align-items:center;justify-content:space-between;gap:30px}.concierge h2{font:400 clamp(34px,4vw,52px) var(--serif);margin:12px 0}.concierge p{font-size:13px;line-height:1.8;color:#d7e0d8;max-width:540px}.concierge .button{background:transparent;border-color:var(--gold);color:white}.concierge .button:hover{background:var(--gold);color:var(--green)}
+    footer{padding:42px 8%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);gap:25px}.footnote{font-size:11px;color:var(--muted);letter-spacing:.08em}
+    /* Concierge chat */
+    .chat-launch{position:fixed;right:22px;bottom:22px;z-index:70;background:var(--gold);border:0;color:#182e28;border-radius:50px;padding:15px 21px;box-shadow:0 8px 28px #10271e33;font-size:12px;font-weight:700;letter-spacing:.06em}
+    .chat-panel{position:fixed;right:22px;bottom:84px;width:min(370px,calc(100vw - 32px));height:510px;background:#fbfaf7;box-shadow:0 18px 60px #12282030;border:1px solid var(--line);z-index:69;display:none;flex-direction:column}
+    .chat-panel.open{display:flex}.chat-head{background:var(--green);color:white;padding:19px 20px;display:flex;align-items:center;justify-content:space-between}.chat-head b{font:500 18px var(--serif)}.chat-head small{display:block;font-size:10px;color:#d4e2d8;margin-top:5px;letter-spacing:.06em}.chat-close{background:none;border:0;color:white;font-size:22px}.chat-messages{padding:16px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:12px}.bubble{max-width:88%;padding:12px 14px;font-size:12px;line-height:1.65;border-radius:2px}.bot{align-self:flex-start;background:#e8eee8;color:var(--ink)}.guest{align-self:flex-end;background:var(--green);color:white}.chat-quick{padding:0 14px 12px;display:flex;gap:7px;flex-wrap:wrap}.quick{border:1px solid var(--gold);background:transparent;border-radius:20px;padding:7px 10px;font-size:10px;color:var(--green)}.chat-input{display:flex;padding:12px;border-top:1px solid var(--line);gap:8px}.chat-input input{flex:1;min-width:0;border:1px solid var(--line);background:white;padding:11px;font:12px var(--sans);outline:none}.chat-input button{border:0;background:var(--green);color:white;padding:0 15px}
+    @media(max-width:850px){header{padding:0 5%;height:74px}nav{gap:15px}nav a:not(.nav-cta){display:none}.hero{min-height:560px}.hero-inner{padding:70px 7%}.intro{grid-template-columns:1fr;padding:70px 7%;gap:35px}.intro-img{min-height:340px}.rooms,.amenities{padding:70px 6%}.room-grid{grid-template-columns:1fr 1fr}.amenity-layout{grid-template-columns:1fr}.amenity-img{min-height:350px}.concierge{padding:65px 7%;flex-direction:column;align-items:flex-start}}
+    @media(max-width:560px){.brand b{font-size:17px}.nav-cta{padding:12px 14px;font-size:10px}.room-grid{grid-template-columns:1fr}.room-photo{height:250px}.hero-note{display:none}.intro-img:after{left:10px}.amenity-list{gap:18px 12px}.concierge{padding:60px 6%}footer{flex-direction:column;text-align:center}.chat-launch{right:14px;bottom:14px}.chat-panel{right:12px;bottom:75px}}
+  </style>
+</head>
+<body>
+  <div class="topline">Un accueil chaleureux, une élégance intemporelle · Concierge 24/7</div>
+  <header>
+    <a class="brand" href="#inicio"><b>HOTEL SOFIA</b><small>Leones Schmalbach</small></a>
+    <nav aria-label="Navegación principal">
+      <a href="#hotel">El hotel</a><a href="#habitaciones">Habitaciones</a><a href="#amenidades">Amenidades</a>
+      <a class="nav-cta" href="#concierge">Reservar / Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="eyebrow">Un séjour à la française</div>
+        <h1>El arte de<br>sentirse en casa.</h1>
+        <p>Una estancia donde la inspiración francesa, los detalles cuidados y la hospitalidad se encuentran para crear momentos inolvidables.</p>
+        <a class="button" href="#habitaciones">Descubre nuestras habitaciones</a>
+      </div>
+      <div class="hero-note">Votre maison loin de chez vous.</div>
+    </section>
+    <section class="intro" id="hotel">
+      <div class="intro-copy">
+        <div class="eyebrow">Bienvenue chez Sofia</div>
+        <h2>Un pequeño mundo de encanto y calma.</h2>
+        <p>Inspirado en el encanto de la cultura francesa, Hotel Sofia Leones Schmalbach te invita a descubrir una hospitalidad hecha de calidez, serenidad y pequeños detalles. Aquí, cada visita comienza con una bienvenida y se convierte en una historia.</p>
+        <a href="#amenidades" class="button">Conoce el hotel</a>
+      </div>
+      <div class="intro-img" role="img" aria-label="Interior acogedor inspirado en la elegancia francesa"></div>
+    </section>
+    <section class="rooms" id="habitaciones">
+      <div class="section-head">
+        <div class="eyebrow">Votre chambre</div>
+        <h2>Descansa a tu manera.</h2>
+        <p>Conoce nuestras categorías de alojamiento y encuentra el espacio que mejor acompaña tu viaje. Disponibilidad y detalles de reserva, directamente con nuestro concierge.</p>
+      </div>
+      <div class="room-grid">
+        <article class="room-card">
+          <div class="room-photo photo-nk1" role="img" aria-label="Habitación acogedora"></div>
+          <div class="room-content"><span class="room-type">Confort essentiel</span><h3>NK1</h3><p>Un espacio pensado para desconectar, descansar y disfrutar de una estancia confortable.</p><a class="room-link" href="#concierge">Consultar por WhatsApp ↗</a></div>
+        </article>
+        <article class="room-card">
+          <div class="room-photo photo-nqq" role="img" aria-label="Habitación de hotel elegante"></div>
+          <div class="room-content"><span class="room-type">Séjour élégant</span><h3>NQQ</h3><p>Una opción para quienes buscan comodidad, detalles especiales y una atmósfera tranquila.</p><a class="room-link" href="#concierge">Consultar por WhatsApp ↗</a></div>
+        </article>
+        <article class="room-card">
+          <div class="room-photo photo-suite" role="img" aria-label="Suite amplia de hotel"></div>
+          <div class="room-content"><span class="room-type">L’expérience signature</span><h3>Suite</h3><p>Una estancia con un toque extra de amplitud y un ambiente para disfrutar sin prisa.</p><a class="room-link" href="#concierge">Consultar por WhatsApp ↗</a></div>
+        </article>
+      </div>
+    </section>
+    <section class="amenities" id="amenidades">
+      <div class="amenity-layout">
+        <div class="amenity-img" role="img" aria-label="Espacio de hotel relajante"></div>
+        <div>
+          <div class="eyebrow">Les petits plaisirs</div>
+          <div class="section-head" style="text-align:left;margin:0">
+            <h2>Todo lo que necesitas, con encanto.</h2>
+            <p>Queremos que tu estancia sea fácil, cómoda y memorable. Explora los servicios del hotel y consulta al concierge para confirmar disponibilidad.</p>
+          </div>
+          <div class="amenity-list">
+            <div class="amenity"><strong>Hospitalidad</strong><span>Un equipo atento a tus necesidades durante tu estancia.</span></div>
+            <div class="amenity"><strong>Concierge 24/7</strong><span>Respuestas y orientación cuando las necesites.</span></div>
+            <div class="amenity"><strong>Reserva directa</strong><span>Consulta habitaciones y coordina tu llegada por WhatsApp.</span></div>
+            <div class="amenity"><strong>Detalles especiales</strong><span>Cuéntanos qué haría tu visita más memorable.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="concierge" id="concierge">
+      <div>
+        <div class="eyebrow">À votre service, 24/7</div>
+        <h2>¿En qué podemos ayudarte?</h2>
+        <p>El concierge virtual está disponible a cualquier hora para responder preguntas frecuentes, orientarte con las habitaciones y ayudarte a continuar tu solicitud por WhatsApp.</p>
+      </div>
+      <a class="button" href="#" id="whatsapp-main">Hablar por WhatsApp ↗</a>
+    </section>
+  </main>
+  <footer><a class="brand" href="#inicio"><b>HOTEL SOFIA</b><small>Leones Schmalbach</small></a><span class="footnote">Un séjour à la française · Concierge 24/7</span><span class="footnote">© <span id="year"></span> Hotel Sofia</span></footer>
+
+  <button class="chat-launch" id="chat-launch" aria-label="Abrir concierge virtual">✦ Concierge 24/7</button>
+  <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat concierge">
+    <div class="chat-head"><div><b>Concierge Sofia</b><small>En línea · Estoy aquí para ayudarte</small></div><button class="chat-close" id="chat-close" aria-label="Cerrar chat">×</button></div>
+    <div class="chat-messages" id="chat-messages"><div class="bubble bot">Bonjour! ✨ Bienvenida/o a Hotel Sofia. ¿En qué puedo ayudarte hoy? Puedo contarte sobre nuestras habitaciones, amenidades o ayudarte a contactar al hotel.</div></div>
+    <div class="chat-quick"><button class="quick" data-q="Cuéntame sobre las habitaciones">Habitaciones</button><button class="quick" data-q="¿Qué amenidades tienen?">Amenidades</button><button class="quick" data-q="Quiero reservar">Quiero reservar</button></div>
+    <form class="chat-input" id="chat-form"><input id="chat-text" type="text" placeholder="Escribe tu consulta..." autocomplete="off" aria-label="Mensaje"><button type="submit">Enviar</button></form>
+  </div>
+  <script>
+    // IMPORTANTE: Configura el número oficial de WhatsApp del hotel (formato internacional, solo dígitos).
+    const HOTEL_WHATSAPP = ""; // Ejemplo: "573001234567"
+    document.getElementById("year").textContent=new Date().getFullYear();
+    const panel=document.getElementById("chat-panel"),launch=document.getElementById("chat-launch"),close=document.getElementById("chat-close"),messages=document.getElementById("chat-messages");
+    launch.addEventListener("click",()=>panel.classList.toggle("open"));close.addEventListener("click",()=>panel.classList.remove("open"));
+    function addBubble(text,who){const div=document.createElement("div");div.className="bubble "+who;div.textContent=text;messages.appendChild(div);messages.scrollTop=messages.scrollHeight}
+    function reply(input){const q=input.toLowerCase();
+      if(/habit|nk1|nqq|suite|cuarto|room/.test(q))return "Tenemos tres categorías para orientarte: NK1, NQQ y Suite. Cuéntame tus fechas y cuántas personas viajan para ayudarte a consultar disponibilidad con el hotel.";
+      if(/amen|servic|wifi|internet|pisc|desay|restaur|parque|gym/.test(q))return "Con gusto te comparto información sobre amenidades y servicios. Para confirmar cuáles están disponibles actualmente, puedo ayudarte a contactar al equipo del hotel por WhatsApp.";
+      if(/reserv|dispon|fecha|precio|tarifa|check.?in|check.?out/.test(q))return "¡Claro! Para consultar disponibilidad y tarifas, envíanos tus fechas de llegada y salida, el número de huéspedes y la habitación de interés. El concierge puede continuar contigo por WhatsApp.";
+      if(/whatsapp|contact|hablar|persona|recepcion|humano/.test(q))return "¡Por supuesto! Pulsa el botón de WhatsApp y te ayudaremos a continuar con el equipo del hotel.";
+      if(/hola|buenos|bonjour|salud/.test(q))return "Bonjour! 🌿 Bienvenida/o a Hotel Sofia Leones Schmalbach. ¿Te gustaría conocer nuestras habitaciones, amenidades o hacer una consulta de reserva?";
+      return "¡Gracias por escribirnos! Puedo ayudarte con información de NK1, NQQ, Suite, amenidades y reservas. Si necesitas confirmar algo específico, te conectamos con el hotel por WhatsApp.";
+    }
+    function whatsappUrl(message){if(!HOTEL_WHATSAPP)return "";return "https://wa.me/"+HOTEL_WHATSAPP+"?text="+encodeURIComponent(message)}
+    function sendMessage(text){if(!text.trim())return;addBubble(text,"guest");setTimeout(()=>addBubble(reply(text),"bot"),250);const link=whatsappUrl("Hola, quisiera información sobre Hotel Sofia Leones Schmalbach. Mi consulta: "+text);if(link){setTimeout(()=>{const a=document.createElement("a");a.href=link;a.target="_blank";a.rel="noopener";a.className="quick";a.textContent="Continuar por WhatsApp ↗";messages.appendChild(a);messages.scrollTop=messages.scrollHeight},400)}}
+    document.getElementById("chat-form").addEventListener("submit",e=>{e.preventDefault();const inp=document.getElementById("chat-text");sendMessage(inp.value);inp.value=""});
+    document.querySelectorAll(".quick").forEach(btn=>btn.addEventListener("click",()=>sendMessage(btn.dataset.q)));
+    const waMain=document.getElementById("whatsapp-main");waMain.addEventListener("click",e=>{e.preventDefault();const url=whatsappUrl("Hola, quisiera información y hacer una reserva en Hotel Sofia Leones Schmalbach.");if(url)window.open(url,"_blank","noopener");else{panel.classList.add("open");addBubble("Para activar WhatsApp, configura el número oficial del hotel en el archivo index.html.","bot")}});
+  </script>
+</body>
+</html>
